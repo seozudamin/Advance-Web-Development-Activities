@@ -8,3 +8,6 @@ This project is a Vending Machine application developed using PHP and Laragon. I
 - **Quantity Option**: Users can specify the quantity for each selected item.
 - **Purchase Summary**: After selection, users can view a summary of their purchase.
 - **Total Calculation**: The application calculates the total number of items and the total amount due.
+
+## Acknowledgments
+This project was completed with the assistance of AI tools, which helped streamline the development process and enhance the overall functionality of the application.
