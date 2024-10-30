@@ -52,7 +52,6 @@ Peys App is a versatile application that allows users to select and customize ph
 - **Adjustable Photo Size**: Users can resize their images using an intuitive slider interface.
 - **Border Color Selection**: Users can choose their desired border color for the image.
 - **Process Button**: A dedicated button to process the selected image with the chosen settings.
-- **Image Upload**: Users can upload images directly from their media source, whether on a PC or mobile device.
 
 ## Usage
 To use the Peys App, simply select an image from your device, adjust the size and border color using the provided tools, and click the process button to finalize your image before uploading.
