@@ -1,9 +1,11 @@
-# Vending Machine Application
+# Advance Web Development with PHP language, Supported by AI 
 
-## Overview
+## Vending Machine Application
+
+### Overview
 This project is a Vending Machine application developed using PHP and Laragon. It allows users to select from a list of products, specify the quantity, and view a purchase summary including the total number of items and the total amount due.
 
-## Features
+### Features
 
 - **Product Selection**: Users can choose from 5 different items.
 - **Quantity Option**: Users can specify the quantity for each selected item.
