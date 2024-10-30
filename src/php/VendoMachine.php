@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['products']) && !empty($_POST['products'])) {
         foreach ($_POST['products'] as $product) {
             $selectedItems[] = $product;
-            $price = (int)filter_var($product, FILTER_SANITIZE_NUMBER_INT);
+            $price = (int) filter_var($product, FILTER_SANITIZE_NUMBER_INT);
             $totalAmount += $price;
         }
     } else {
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check if quantity is valid
     if (isset($_POST['quantity']) && $_POST['quantity'] > 0) {
-        $quantity = (int)$_POST['quantity'];
+        $quantity = (int) $_POST['quantity'];
         $totalAmount = ($totalAmount + $sizeAdjustment) * $quantity;
     } else {
         $errorMessage .= "Please enter a valid quantity greater than 0.<br>";
@@ -48,6 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Vendo Machine</title>
     <style>
@@ -57,16 +58,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             margin-bottom: 20px;
             border-radius: 5px;
         }
+
         .product-item {
             display: flex;
             align-items: center;
             margin-bottom: 10px;
         }
+
         .error {
             color: red;
         }
     </style>
 </head>
+
 <body>
     <h1>Vendo Machine</h1>
     <form method="post">
@@ -118,7 +122,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         <div class="bordered">
             <h2>Quantity:</h2>
-            <input type="number" name="quantity" value="<?php echo (isset($_POST['quantity'])) ? $_POST['quantity'] : '1'; ?>" min="1"><br>
+            <input type="number" name="quantity"
+                value="<?php echo (isset($_POST['quantity'])) ? $_POST['quantity'] : '1'; ?>" min="1"><br>
             <br>
             <input type="submit" value="Check out">
         </div>
@@ -136,7 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             foreach ($selectedItems as $item) {
                 // Extract the item name without the price
                 $itemName = preg_replace('/\sP\s\d+/', '', $item);
-                $basePrice = (int)filter_var($item, FILTER_SANITIZE_NUMBER_INT);
+                $basePrice = (int) filter_var($item, FILTER_SANITIZE_NUMBER_INT);
                 $sizeText = "";
                 $adjustedPrice = $basePrice;
 
@@ -156,7 +161,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             break;
                     }
                 }
-
                 // Determine the correct quantity text
                 $quantityText = ($quantity == 1) ? "piece" : "pieces";
 
@@ -172,4 +176,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ?>
     </form>
 </body>
+
 </html>
