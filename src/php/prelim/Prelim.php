@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <!--Navigation Tab-->
     <div class="container register">
         <div class="row">
             <div class="col-md-3 register-left">
@@ -31,6 +32,7 @@
                             aria-controls="profile" aria-selected="false">Grade</a>
                     </li>
                 </ul>
+                <!--Student Enrollment Form-->
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <h3 class="register-heading">Student Enrollment Form</h3>
@@ -70,6 +72,7 @@
                             </div>
                         </div>
                     </div>
+                    <!--Grade Form-->
                     <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                         <h3 class="register-heading">Enter Grades for Name</h3>
                         <div class="row register-form">
@@ -91,6 +94,49 @@
                 </div>
             </div>
         </div>
+        <!--Results-->
+        <hr>
+<div class="container results">
+    <h3 class="register-heading">Results</h3>
+    <form>
+        <div class="form-group">
+            <label for="first-name">First Name:</label>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="last-name">Last Name:</label>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="course">Course:</label>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="prelim">Prelim:</label>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="midterm">Midterm:</label>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="finals">Finals:</label>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="total-average">Total Average:</label>
+            <br>
+        </div>
+    </form>
+</div>
     </div>
 
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
