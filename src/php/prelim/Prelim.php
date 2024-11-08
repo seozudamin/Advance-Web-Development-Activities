@@ -61,6 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,7 +69,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/css/prelim.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="container register">
         <div class="row">
@@ -168,28 +171,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <!-- Results Display -->
     <?php if ($_SESSION['show_results']): ?>
-    <div class="bg-white p-4 rounded shadow mt-4">
-        <h3>Student Details</h3>
-        <p>First Name: <?php echo $_SESSION['firstName']; ?></p>
-        <p>Last Name: <?php echo $_SESSION['lastName']; ?></p>
-        <p>Age: <?php echo $_SESSION['age']; ?></p>
-        <p>Gender: <?php echo ucfirst($_SESSION['gender']); ?></p> <!-- Added Gender -->
-        <p>Course: <?php echo $_SESSION['course']; ?></p>
-        <p>Email: <?php echo $_SESSION['email']; ?></p>
+        <div class="p-4 rounded shadow mt-4 text-center mx-auto" id="results" style="max-width: 600px;">
+            <h2>Student Details</h2>
+            <p>First Name: <?php echo $_SESSION['firstName']; ?></p>
+            <p>Last Name: <?php echo $_SESSION['lastName']; ?></p>
+            <p>Age: <?php echo $_SESSION['age']; ?></p>
+            <p>Gender: <?php echo ucfirst($_SESSION['gender']); ?></p> <!-- Added Gender -->
+            <p>Course: <?php echo $_SESSION['course']; ?></p>
+            <p>Email: <?php echo $_SESSION['email']; ?></p>
 
-        <h3 class="mt-4">Grades Summary</h3>
-        <p>Prelim: <?php echo $_SESSION['prelim']; ?></p>
-        <p>Midterm: <?php echo $_SESSION['midterm']; ?></p>
-        <p>Finals: <?php echo $_SESSION['finals']; ?></p>
-        <p><strong>Average:</strong> <?php echo $_SESSION['average']; ?>
-            <span class="<?php echo $_SESSION['status'] == 'Passed' ? 'text-success' : 'text-danger'; ?>">
-                (<?php echo $_SESSION['status']; ?>)
-            </span>
-        </p>
-    </div>
-<?php endif; ?>
-
-
+            <h2 class=" mt-4">Grades Summary</h2>
+            <p>Prelim: <?php echo $_SESSION['prelim']; ?></p>
+            <p>Midterm: <?php echo $_SESSION['midterm']; ?></p>
+            <p>Finals: <?php echo $_SESSION['finals']; ?></p>
+            <p><strong>Average:</strong> <?php echo $_SESSION['average']; ?>
+                <span class="<?php echo $_SESSION['status'] == 'Passed' ? 'text-success' : 'text-danger'; ?>">
+                    (<?php echo $_SESSION['status']; ?>)
+                </span>
+            </p>
+        </div>
+    <?php endif; ?>
+    <script src="/assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
