@@ -142,7 +142,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <!-- Grade Form -->
                     <?php if (isset($_SESSION['show_grade_form'])): ?>
                         <div class="tab-pane fade show active" id="profile" role="tabpanel">
-                            <h3 class="register-heading">Enter Grades</h3>
+                        <h3 class="register-heading">Enter Grades <?php echo $_SESSION['firstName']; ?> <?php echo $_SESSION['lastName']; ?></h3>
                             <form method="POST">
                                 <div class="row register-form">
                                     <div class="col-md-6">
